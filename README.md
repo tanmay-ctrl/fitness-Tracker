@@ -2,7 +2,7 @@
 
 A responsive web application to log daily workouts, calculate estimated calories burned, and track activity history.
 
-🟢 **[View Live Demo](https://tanmay-ctrl.github.io/Fitness-Activity-Tracker/)**
+🟢 **[View Live Demo](https://tanmay-ctrl.github.io/fitness-Tracker/)**
 
 ### Features
 * **Smart Calculation:** Automatically estimates calories burned based on activity type and duration.
