@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FitnessTracker</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header class="app-header">
+        <nav class="container">
+            <div class="logo">FitnessTracker</div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#log-workout-form">My Workout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="welcome-header">
+                <h1>Welcome back, User!</h1>
+                <p>Here is your activity summary for today.</p>
+            </div>
+            <div class="dashboard-content">       
+                <!-- Form Section -->
+                <section class="card log-section">
+                    <h2>Log a New Workout</h2>
+                    <form id="log-workout-form">
+                        <div class="form-group">
+                            <label for="activity-type">Activity Type</label>
+                            <select id="activity-type" required>
+                                <option value="Running">Running</option>
+                                <option value="Walking">Walking</option>
+                                <option value="Cycling">Cycling</option>
+                                <option value="Weightlifting">Weightlifting</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Swimming">Swimming</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="duration">Duration</label>
+                                <input type="number" id="duration" placeholder="e.g. 45" required min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="duration-unit">Unit</label>
+                                <select id="duration-unit">
+                                    <option value="minutes">min</option>
+                                    <option value="hours">hr</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="distance">Distance (Optional)</label>
+                            <input type="number" step="0.1" id="distance" placeholder="e.g. 3.5 (miles)">
+                        </div>
+
+                        <button type="submit" class="btn-primary">Add Workout</button>
+                    </form>
+                </section>
+                <section class="card history-section">
+                    <h2>Recent Activity</h2>
+                    <div id="activity-list" class="activity-list">
+                        <p id="empty-state" style="text-align:center; color:#999; margin-top:1rem;">No workouts logged yet.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Fitness Tracker Web. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
